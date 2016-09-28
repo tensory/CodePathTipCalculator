@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		021AA2271D98812D00AACCCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021AA2261D98812D00AACCCD /* AppDelegate.swift */; };
-		021AA2291D98812D00AACCCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021AA2281D98812D00AACCCD /* ViewController.swift */; };
+		021AA2291D98812D00AACCCD /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021AA2281D98812D00AACCCD /* TipViewController.swift */; };
 		021AA22C1D98812D00AACCCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021AA22A1D98812D00AACCCD /* Main.storyboard */; };
 		021AA22E1D98812D00AACCCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021AA22D1D98812D00AACCCD /* Assets.xcassets */; };
 		021AA2311D98812D00AACCCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021AA22F1D98812D00AACCCD /* LaunchScreen.storyboard */; };
+		021AA23B1D99ECA500AACCCD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021AA23A1D99ECA500AACCCD /* SettingsViewController.swift */; };
+		021AA23D1D99FB9800AACCCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021AA23C1D99FB9800AACCCD /* Constants.swift */; };
+		025B8CF21D9B8970006E3156 /* TipAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B8CF11D9B8970006E3156 /* TipAmountViewController.swift */; };
+		025B8CFA1D9B9140006E3156 /* StringUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B8CF91D9B9140006E3156 /* StringUtilities.swift */; };
+		025B8CFC1D9B9839006E3156 /* DidSetTipPercentageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B8CFB1D9B9839006E3156 /* DidSetTipPercentageDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		021AA2231D98812D00AACCCD /* CPTipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPTipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		021AA2261D98812D00AACCCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		021AA2281D98812D00AACCCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		021AA2281D98812D00AACCCD /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		021AA22B1D98812D00AACCCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		021AA22D1D98812D00AACCCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		021AA2301D98812D00AACCCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		021AA2321D98812D00AACCCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		021AA23A1D99ECA500AACCCD /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
+		021AA23C1D99FB9800AACCCD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		025B8CF11D9B8970006E3156 /* TipAmountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipAmountViewController.swift; path = ../TipAmountViewController.swift; sourceTree = "<group>"; };
+		025B8CF91D9B9140006E3156 /* StringUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtilities.swift; sourceTree = "<group>"; };
+		025B8CFB1D9B9839006E3156 /* DidSetTipPercentageDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DidSetTipPercentageDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +64,17 @@
 		021AA2251D98812D00AACCCD /* CPTipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				025B8CF11D9B8970006E3156 /* TipAmountViewController.swift */,
+				021AA23A1D99ECA500AACCCD /* SettingsViewController.swift */,
 				021AA2261D98812D00AACCCD /* AppDelegate.swift */,
-				021AA2281D98812D00AACCCD /* ViewController.swift */,
+				021AA2281D98812D00AACCCD /* TipViewController.swift */,
 				021AA22A1D98812D00AACCCD /* Main.storyboard */,
 				021AA22D1D98812D00AACCCD /* Assets.xcassets */,
 				021AA22F1D98812D00AACCCD /* LaunchScreen.storyboard */,
 				021AA2321D98812D00AACCCD /* Info.plist */,
+				021AA23C1D99FB9800AACCCD /* Constants.swift */,
+				025B8CF91D9B9140006E3156 /* StringUtilities.swift */,
+				025B8CFB1D9B9839006E3156 /* DidSetTipPercentageDelegate.swift */,
 			);
 			path = CPTipCalculator;
 			sourceTree = "<group>";
@@ -135,8 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				021AA2291D98812D00AACCCD /* ViewController.swift in Sources */,
+				021AA2291D98812D00AACCCD /* TipViewController.swift in Sources */,
+				025B8CFA1D9B9140006E3156 /* StringUtilities.swift in Sources */,
 				021AA2271D98812D00AACCCD /* AppDelegate.swift in Sources */,
+				021AA23B1D99ECA500AACCCD /* SettingsViewController.swift in Sources */,
+				025B8CF21D9B8970006E3156 /* TipAmountViewController.swift in Sources */,
+				025B8CFC1D9B9839006E3156 /* DidSetTipPercentageDelegate.swift in Sources */,
+				021AA23D1D99FB9800AACCCD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +308,7 @@
 				021AA2371D98812D00AACCCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

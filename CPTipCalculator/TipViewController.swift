@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let tipPercentages: [Double] = [0.18, 0.2, 0.25]
+    let tipPercentages: [Double] = Constants.presetTipPercentages
     
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
@@ -18,7 +18,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let tipPercentage: Double = defaults.doubleForKey(Constants.Settings.defaultTipPercentage) {
+            tipControl.selectedSegmentIndex = tipPercentages.indexOf(tipPercentage)!
+        } else {
+            defaults.setDouble(tipPercentages[0], forKey: Constants.Settings.defaultTipPercentage)
+            defaults.synchronize()
+        }
     }
 
     override func didReceiveMemoryWarning() {
