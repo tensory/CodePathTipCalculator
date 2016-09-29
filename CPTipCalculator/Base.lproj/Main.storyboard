@@ -20,7 +20,6 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="qZg-d0-BjZ" customClass="DiscreteUISlider" customModule="CPTipCalculator" customModuleProvider="target">
                                         <rect key="frame" x="-7" y="8" width="237" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="0.40000000600000002" green="0.69411766529999996" blue="0.19607843459999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="onDragSliderSticky:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mu4-bv-9Rl"/>
                                         </connections>
@@ -69,6 +68,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" id="0I9-FY-aVA">
                                         <rect key="frame" x="112" y="14" width="97" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         <connections>
@@ -103,6 +103,7 @@
                         <outlet property="TipLabel" destination="poI-um-ShJ" id="FQl-ih-aZj"/>
                         <outlet property="TotalLabel" destination="Ukr-1a-x8u" id="Sqg-S9-Xim"/>
                         <outlet property="billField" destination="0I9-FY-aVA" id="dbe-tr-tyD"/>
+                        <outlet property="billFrame" destination="q91-lC-xiC" id="cQ1-N7-NeQ"/>
                         <outlet property="tipAmountSlider" destination="qZg-d0-BjZ" id="ZuS-aA-Sue"/>
                         <outlet property="tipAmountSliderLabel" destination="Yll-R9-yl9" id="i8f-Be-TrS"/>
                     </connections>

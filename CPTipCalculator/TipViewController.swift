@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var billFrame: UIView!
+    
     let tipPercentages: [Double] = Constants.presetTipPercentages
     
     @IBOutlet weak var tipLabel: UILabel!
@@ -38,6 +41,7 @@ class ViewController: UIViewController {
         tipAmountSliderLabel.text = StringUtilities.getIntegerPercentage(tipAmountSlider.getDataValue())
         
         billField.becomeFirstResponder()
+        self.setBillAreaColor(tipAmountSlider.getDataValue())
     }
     
     @IBAction func onDragSliderSticky(sender: AnyObject) {
@@ -46,6 +50,8 @@ class ViewController: UIViewController {
         calculateTip(displayValue)
         tipAmountSliderLabel.text = StringUtilities.getIntegerPercentage(displayValue)
         tipAmountSlider.setDiscretePosition()
+        
+        self.setBillAreaColor(displayValue)
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,6 +64,9 @@ class ViewController: UIViewController {
         
         if let billAmountStr: String = billField.text {
             let formatter = NSNumberFormatter()
+            if !billAmountStr.isEmpty && billAmountStr.characters.first! == "$" {
+                formatter.numberStyle = .CurrencyStyle
+            }
             let billAmount:Double = Double(formatter.numberFromString(billAmountStr)!)
             self.billField.text = StringUtilities.getCurrencyValue(billAmount)
         }
@@ -68,10 +77,54 @@ class ViewController: UIViewController {
     }
     
     func _calculateTip(tipPercentage: Double) {
-        let billAmount: Double = Double(billField.text!) ?? 0
+        func decodeCurrencyNumber(input: String?) -> Double {
+            if let billStr = input {
+                let formatter = NSNumberFormatter()
+                if !billStr.isEmpty && billStr.characters.first! == "$" {
+                    formatter.numberStyle = .CurrencyStyle
+                }
+                if let result = formatter.numberFromString(billStr) {
+                    return Double(result)
+                }
+            }
+            return 0
+        }
+        let billAmount: Double = decodeCurrencyNumber(billField.text)
+        
         let tipAmount = billAmount * tipPercentage
         
         tipLabel.text = StringUtilities.getCurrencyValue(tipAmount)
         totalLabel.text = StringUtilities.getCurrencyValue(billAmount + tipAmount)
+    }
+    
+    func setBillAreaColor(value: Double) {
+        let color: UIColor
+        
+        enum Colors {
+            case purple, pink, red
+            func getColor() -> UIColor {
+                switch self {
+                case .purple:
+                    return UIColor(netHex: 0x797FF2)
+                case .pink:
+                    return UIColor(netHex: 0xF279B4)
+                case red:
+                    return UIColor(netHex: 0xF27B79)
+                }
+            }
+        }
+        
+        switch value {
+        case tipPercentages[0]:
+            color = Colors.purple.getColor()
+        case tipPercentages[1]:
+            color = Colors.pink.getColor()
+        case tipPercentages[2]:
+            color = Colors.red.getColor()
+        default:
+            color = UIColor.whiteColor()
+        }
+        
+        billFrame.backgroundColor = color
     }
 }
