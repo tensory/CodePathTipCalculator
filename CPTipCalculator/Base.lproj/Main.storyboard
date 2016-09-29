@@ -57,6 +57,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yll-R9-yl9">
+                                <rect key="frame" x="245" y="316" width="55" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="p7D-nt-uJI">
                                 <rect key="frame" x="19" y="278" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -69,6 +76,13 @@
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="k1N-eS-sAH"/>
                                 </connections>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="qZg-d0-BjZ" customClass="DiscreteUISlider" customModule="CPTipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="19" y="312" width="220" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onDragSliderSticky:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mu4-bv-9Rl"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -87,6 +101,8 @@
                         <outlet property="TipLabel" destination="poI-um-ShJ" id="FQl-ih-aZj"/>
                         <outlet property="TotalLabel" destination="Ukr-1a-x8u" id="Sqg-S9-Xim"/>
                         <outlet property="billField" destination="0I9-FY-aVA" id="dbe-tr-tyD"/>
+                        <outlet property="tipAmountSlider" destination="qZg-d0-BjZ" id="ZuS-aA-Sue"/>
+                        <outlet property="tipAmountSliderLabel" destination="Yll-R9-yl9" id="i8f-Be-TrS"/>
                         <outlet property="tipControl" destination="p7D-nt-uJI" id="bwY-7V-IB8"/>
                     </connections>
                 </viewController>
