@@ -1,10 +1,10 @@
-# Pre-work - Mini Tip Calculator
+# Pre-work - Smooth Calculator
 
-**Mini Tip Calculator** is a tip calculator application for iOS.
+**Smooth Calculator** is a tip calculator application for iOS.
 
 Submitted by: **Ari Lacenski**
 
-Time spent: **6** hours spent in total
+Time spent: **11** hours spent in total
 
 ## User Stories
 
