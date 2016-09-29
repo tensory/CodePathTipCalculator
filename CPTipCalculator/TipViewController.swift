@@ -36,8 +36,8 @@ class ViewController: UIViewController {
 
         }
         tipAmountSliderLabel.text = StringUtilities.getIntegerPercentage(tipAmountSlider.getDataValue())
-        billField.text = StringUtilities.getCurrencyValue(0)
-//        totalLabel.text = StringUtilities.getCurrencyValue(0)
+        
+        billField.becomeFirstResponder()
     }
     
     @IBAction func onDragSliderSticky(sender: AnyObject) {

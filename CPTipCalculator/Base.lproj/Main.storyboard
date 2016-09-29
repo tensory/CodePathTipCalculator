@@ -20,6 +20,7 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="qZg-d0-BjZ" customClass="DiscreteUISlider" customModule="CPTipCalculator" customModuleProvider="target">
                                         <rect key="frame" x="-7" y="8" width="237" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.40000000600000002" green="0.69411766529999996" blue="0.19607843459999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="onDragSliderSticky:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mu4-bv-9Rl"/>
                                         </connections>
