@@ -25,8 +25,13 @@ class DiscreteUISlider : UISlider {
         self.dataValue = Double(minimumValue)
     }
     
-    func onReleaseSlider(sender: AnyObject) {
-        
+    func setDiscreteValue(newValue: Double) {
+        let floatVal = Float(newValue)
+        if (!(floatVal >= self.minimumValue && floatVal <= self.maximumValue)) {
+            fatalError("Value \(floatVal) is not in range.")
+        }
+        self.setValue(floatVal, animated: false)
+        self.setDiscretePosition()
     }
     
     func setDiscretePosition() {

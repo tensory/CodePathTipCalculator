@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
-    @IBOutlet weak var tipControl: UISegmentedControl!
-
     
     @IBOutlet weak var tipAmountSlider: DiscreteUISlider!
     @IBOutlet weak var tipAmountSliderLabel: UILabel!
@@ -25,19 +23,19 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
         tipAmountSlider.initialize(tipPercentages)
-        tipAmountSlider.value = tipAmountSlider.minimumValue
-        
-        tipAmountSliderLabel.text = StringUtilities.getIntegerPercentage(tipAmountSlider.getDataValue())
-        
         
         let defaults = NSUserDefaults.standardUserDefaults()
         
         if let tipPercentage: Double = defaults.doubleForKey(Constants.Settings.defaultTipPercentage) {
-            tipControl.selectedSegmentIndex = tipPercentages.indexOf(tipPercentage)!
+            tipAmountSlider.setDiscreteValue(tipPercentage)
         } else {
-            defaults.setDouble(tipPercentages[0], forKey: Constants.Settings.defaultTipPercentage)
+            defaults.setDouble(tipPercentages.first!, forKey: Constants.Settings.defaultTipPercentage)
             defaults.synchronize()
+            tipAmountSlider.setValue(tipAmountSlider.minimumValue, animated: false)
+
         }
+        tipAmountSliderLabel.text = StringUtilities.getIntegerPercentage(tipAmountSlider.getDataValue())
+
     }
     
     @IBAction func onDragSliderSticky(sender: AnyObject) {
