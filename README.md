@@ -17,25 +17,29 @@ The following **optional** features are implemented:
 * [ ] UI animations
 * [ ] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] The main screen has been redesigned.
+- [x] The background of the bill amount changes in response to the tip amount: the bigger the tip, the warmer the color.
+- [x] The tip amount selector is a slider with discrete stops so that the user can choose between 18, 20, or 25%.
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/tensory/CodePathTipCalculator/blob/master/MiniTipCalculator.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/tensory/CodePathTipCalculator/blob/master/SmoothTipCalculator.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-I would like to implement the default tip amount selector with a popover modal for the picker. For the first submission, I was able to add a new view controller and Cocoa Touch Controller to display a temporary screen, but I haven't figured out how to turn its view into a popover. 
+I would like to implement the default tip amount selector with a popover modal for the picker. For the first submission, I was able to add a new view controller and Cocoa Touch Controller to display a temporary screen, but I haven't figured out how to turn its view into a modal. 
 
 It took me a few tries to use the graphical storyboard properly.
+
+I googled for some sample `.gitignore` files, but I'm not certain which Xcode directories are safe to put in `.gitignore`.
 
 ## License
 

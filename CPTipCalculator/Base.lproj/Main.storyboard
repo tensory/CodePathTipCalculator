@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Smooth Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CPTipCalculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,7 +92,7 @@
                             <outletCollection property="gestureRecognizers" destination="fGU-Ym-UrN" appends="YES" id="g2C-Zx-JWe"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="w13-Hp-3qA">
+                    <navigationItem key="navigationItem" title="Smooth Calculator" id="w13-Hp-3qA">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="X0s-Of-obL">
                             <connections>
                                 <segue destination="TJD-4s-Uyg" kind="push" id="y8Z-8N-CwG"/>
