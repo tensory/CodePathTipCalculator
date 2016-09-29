@@ -29,13 +29,15 @@ class ViewController: UIViewController {
         if let tipPercentage: Double = defaults.doubleForKey(Constants.Settings.defaultTipPercentage) {
             tipAmountSlider.setDiscreteValue(tipPercentage)
         } else {
-            defaults.setDouble(tipPercentages.first!, forKey: Constants.Settings.defaultTipPercentage)
+            let minimum = tipPercentages.first!
+            defaults.setDouble(minimum, forKey: Constants.Settings.defaultTipPercentage)
             defaults.synchronize()
-            tipAmountSlider.setValue(tipAmountSlider.minimumValue, animated: false)
+            tipAmountSlider.setDiscreteValue(minimum)
 
         }
         tipAmountSliderLabel.text = StringUtilities.getIntegerPercentage(tipAmountSlider.getDataValue())
-
+        billField.text = StringUtilities.getCurrencyValue(0)
+//        totalLabel.text = StringUtilities.getCurrencyValue(0)
     }
     
     @IBAction func onDragSliderSticky(sender: AnyObject) {
@@ -53,6 +55,12 @@ class ViewController: UIViewController {
     
     @IBAction func onTapScreen(sender: AnyObject) {
         self.view.endEditing(true)
+        
+        if let billAmountStr: String = billField.text {
+            let formatter = NSNumberFormatter()
+            let billAmount:Double = Double(formatter.numberFromString(billAmountStr)!)
+            self.billField.text = StringUtilities.getCurrencyValue(billAmount)
+        }
     }
     
     @IBAction func calculateTip(sender: AnyObject) {
@@ -63,7 +71,7 @@ class ViewController: UIViewController {
         let billAmount: Double = Double(billField.text!) ?? 0
         let tipAmount = billAmount * tipPercentage
         
-        tipLabel.text = String(format: "$%.2f", tipAmount)
-        totalLabel.text = String(format: "$%.2f", billAmount + tipAmount)
+        tipLabel.text = StringUtilities.getCurrencyValue(tipAmount)
+        totalLabel.text = StringUtilities.getCurrencyValue(billAmount + tipAmount)
     }
 }

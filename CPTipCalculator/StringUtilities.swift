@@ -11,4 +11,12 @@ class StringUtilities {
     static func getIntegerPercentage(input: Double) -> String {
         return "\(Int(input * 100))%"
     }
+    
+    static func getCurrencyValue(input: Double) -> String {
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        formatter.locale = NSLocale(localeIdentifier: "en_US")
+        
+        return formatter.stringFromNumber(input)!
+    }
 }
