@@ -4,7 +4,7 @@
 
 Submitted by: **Ari Lacenski**
 
-Time spent: **11** hours spent in total
+Time spent: **13** hours spent in total
 
 ## User Stories
 
@@ -15,7 +15,7 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 * [ ] UI animations
-* [ ] Remembering the bill amount across app restarts (if <10mins)
+* [x] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
 * [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
@@ -36,6 +36,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 I would like to implement the default tip amount selector with a popover modal for the picker. For the first submission, I was able to add a new view controller and Cocoa Touch Controller to display a temporary screen, but I haven't figured out how to turn its view into a modal. 
+
+I'd like to set up a NavigationController without an app title or thick light-grey bar, still showing the settings button.
 
 It took me a few tries to use the graphical storyboard properly.
 

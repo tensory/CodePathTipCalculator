@@ -8,8 +8,10 @@
 
 struct Constants {
     static let presetTipPercentages: [Double] = [0.18, 0.2, 0.25]
+    static let tenMinutes = 600 // seconds
     
     struct Settings {
         static let defaultTipPercentage: String = "DefaultTipPercentage"
+        static let cachedValue: String = "cachedValue"
     }
 }

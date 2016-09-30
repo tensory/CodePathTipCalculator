@@ -23,6 +23,7 @@ class SettingsViewController: UIViewController, DidSetTipPercentageDelegate {
         
         let defaults = NSUserDefaults.standardUserDefaults();
         tipSettingValue.text = StringUtilities.getIntegerPercentage(defaults.doubleForKey(Constants.Settings.defaultTipPercentage))
+        
     }
 
     override func didReceiveMemoryWarning() {

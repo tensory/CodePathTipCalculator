@@ -17,6 +17,9 @@
 		025B8CF21D9B8970006E3156 /* TipAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B8CF11D9B8970006E3156 /* TipAmountViewController.swift */; };
 		025B8CFA1D9B9140006E3156 /* StringUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B8CF91D9B9140006E3156 /* StringUtilities.swift */; };
 		025B8CFC1D9B9839006E3156 /* DidSetTipPercentageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B8CFB1D9B9839006E3156 /* DidSetTipPercentageDelegate.swift */; };
+		02BAC4761D9CC0B6007A2215 /* DiscreteUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BAC4751D9CC0B6007A2215 /* DiscreteUISlider.swift */; };
+		02E704B11D9CD43A00B9A923 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E704B01D9CD43A00B9A923 /* UIColor.swift */; };
+		02E704B71D9EA3BD00B9A923 /* CachedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E704B61D9EA3BD00B9A923 /* CachedValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		025B8CF11D9B8970006E3156 /* TipAmountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipAmountViewController.swift; path = ../TipAmountViewController.swift; sourceTree = "<group>"; };
 		025B8CF91D9B9140006E3156 /* StringUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtilities.swift; sourceTree = "<group>"; };
 		025B8CFB1D9B9839006E3156 /* DidSetTipPercentageDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DidSetTipPercentageDelegate.swift; sourceTree = "<group>"; };
+		02BAC4751D9CC0B6007A2215 /* DiscreteUISlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscreteUISlider.swift; sourceTree = "<group>"; };
+		02E704B01D9CD43A00B9A923 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		02E704B61D9EA3BD00B9A923 /* CachedValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,9 @@
 				021AA23C1D99FB9800AACCCD /* Constants.swift */,
 				025B8CF91D9B9140006E3156 /* StringUtilities.swift */,
 				025B8CFB1D9B9839006E3156 /* DidSetTipPercentageDelegate.swift */,
+				02BAC4751D9CC0B6007A2215 /* DiscreteUISlider.swift */,
+				02E704B01D9CD43A00B9A923 /* UIColor.swift */,
+				02E704B61D9EA3BD00B9A923 /* CachedValue.swift */,
 			);
 			path = CPTipCalculator;
 			sourceTree = "<group>";
@@ -154,7 +163,10 @@
 				025B8CFA1D9B9140006E3156 /* StringUtilities.swift in Sources */,
 				021AA2271D98812D00AACCCD /* AppDelegate.swift in Sources */,
 				021AA23B1D99ECA500AACCCD /* SettingsViewController.swift in Sources */,
+				02E704B11D9CD43A00B9A923 /* UIColor.swift in Sources */,
+				02E704B71D9EA3BD00B9A923 /* CachedValue.swift in Sources */,
 				025B8CF21D9B8970006E3156 /* TipAmountViewController.swift in Sources */,
+				02BAC4761D9CC0B6007A2215 /* DiscreteUISlider.swift in Sources */,
 				025B8CFC1D9B9839006E3156 /* DidSetTipPercentageDelegate.swift in Sources */,
 				021AA23D1D99FB9800AACCCD /* Constants.swift in Sources */,
 			);

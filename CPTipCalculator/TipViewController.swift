@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        if let tipPercentage: Double = defaults.doubleForKey(Constants.Settings.defaultTipPercentage) {
+        if let tipPercentage: Double = defaults.doubleForKey(Constants.Settings.defaultTipPercentage) where tipPercentage >= tipPercentages.first! {
             tipAmountSlider.setDiscreteValue(tipPercentage)
         } else {
             let minimum = tipPercentages.first!
@@ -40,8 +40,14 @@ class ViewController: UIViewController {
         }
         tipAmountSliderLabel.text = StringUtilities.getIntegerPercentage(tipAmountSlider.getDataValue())
         
-        billField.becomeFirstResponder()
         self.setBillAreaColor(tipAmountSlider.getDataValue())
+        
+        if let lastAmount = CachedValue.get() {
+            billField.text = StringUtilities.getCurrencyValue(lastAmount)
+            _calculateTip(tipAmountSlider.getDataValue())
+        } else {
+            billField.becomeFirstResponder()
+        }
     }
     
     @IBAction func onDragSliderSticky(sender: AnyObject) {
@@ -90,11 +96,12 @@ class ViewController: UIViewController {
             return 0
         }
         let billAmount: Double = decodeCurrencyNumber(billField.text)
-        
         let tipAmount = billAmount * tipPercentage
         
         tipLabel.text = StringUtilities.getCurrencyValue(tipAmount)
         totalLabel.text = StringUtilities.getCurrencyValue(billAmount + tipAmount)
+        
+        CachedValue.set(billAmount)
     }
     
     func setBillAreaColor(value: Double) {
